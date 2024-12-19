@@ -4,6 +4,7 @@ import pandas as pd
 
 # I am making a change here.
 # I am making another change here.
+# I am in the new branch
 class Warehouse: 
     def __init__ (self, inventory_level):
         self.i = inventory_level
@@ -12,7 +13,6 @@ class Warehouse:
     def receive_order(self, Q, time):
         self.review_inventory(time)
         self.i, self.o = self.i + Q, self.o - Q # if we recieve order then it adds to our inventory, and reduces the number of outstanding units we have to deliver
-        self.review_inventory(time)
     
     def order(self, Q, time):
         self.review_inventory(time)
